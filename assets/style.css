@@ -1,0 +1,191 @@
+/* styles.css */
+body {
+    font-family: 'Noto Sans', Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('https://www.farmpolicyfacts.org/wp-content/uploads/2019/10/iStock-1050130316.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center; 
+}
+
+header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Playwrite PE', Arial, sans-serif; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Gap between text and underline */
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 80px; 
+    padding: 20px;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+    }
+}
+
+.content {
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    max-width: 600px; 
+}
+
+.content h1 {
+    font-family: 'Playwrite PE', Arial, sans-serif; 
+    font-size: 28px;
+    font-weight: 700; 
+    margin-bottom: 5px;
+}
+
+.form-container {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.form-container h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+    font-family:'Playwrite PE';
+}
+
+.form-container a {
+    display: block;
+    color:gainsboro;
+    margin-bottom: 15px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2); 
+}
+.form-container input::placeholder {
+    color:rgba(245, 245, 245, 0.92); 
+}
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #0066cc;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #005bb5;
+}
+
+.hidden {
+    display: none;
+}
+
+#sign-up-form-container.show {
+    display: block;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
+
+    .form-container input,
+    .form-container button {
+        font-size: 14px;
+    }
+}
+
+#login-container.hidden {
+    display: none;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisaan Support Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+PE:wght@400;700&family=Noto+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Kisaan</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <h1> Log In to Access Support and Resources</h1>
+            
+            <div class="form-container">
+                <div id="login-container">
+                    <h2>Login</h2>
+                    <a href="#" id="sign-up-link">Not Registered? Sign Up</a>
+                    <form id="log-in-form">
+                        <input  type="email" id="email-login" name="email" required placeholder="Enter your email">
+                        
+                        <input type="password" id="password-login" name="password" required placeholder="Enter your password">
+                        
+                        <button type="submit">Sign In</button>
+                    </form>
+                </div>
+                <div id="sign-up-form-container" class="hidden">
+                    <h2>Sign Up</h2>
+                    <form id="sign-up-form">
+                        <input type="text" id="username" name="username" required placeholder="Enter your username">
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+
+                        <button type="submit">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
